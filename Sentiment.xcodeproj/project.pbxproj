@@ -15,6 +15,7 @@
 		F20A15A625B1AE890016F71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20A15A425B1AE890016F71B /* LaunchScreen.storyboard */; };
 		F20A15B125B1AE890016F71B /* SentimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20A15B025B1AE890016F71B /* SentimentTests.swift */; };
 		F20A15BC25B1AE890016F71B /* SentimentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20A15BB25B1AE890016F71B /* SentimentUITests.swift */; };
+		F20A15CE25B1CD3B0016F71B /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20A15CD25B1CD3B0016F71B /* Sentiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F20A15B725B1AE890016F71B /* SentimentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20A15BB25B1AE890016F71B /* SentimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentUITests.swift; sourceTree = "<group>"; };
 		F20A15BD25B1AE890016F71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20A15CD25B1CD3B0016F71B /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				F20A159925B1AE890016F71B /* AppDelegate.swift */,
 				F20A159B25B1AE890016F71B /* SceneDelegate.swift */,
 				F20A159D25B1AE890016F71B /* ViewController.swift */,
+				F20A15CD25B1CD3B0016F71B /* Sentiment.swift */,
 				F20A159F25B1AE890016F71B /* Main.storyboard */,
 				F20A15A225B1AE890016F71B /* Assets.xcassets */,
 				F20A15A425B1AE890016F71B /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20A159E25B1AE890016F71B /* ViewController.swift in Sources */,
+				F20A15CE25B1CD3B0016F71B /* Sentiment.swift in Sources */,
 				F20A159A25B1AE890016F71B /* AppDelegate.swift in Sources */,
 				F20A159C25B1AE890016F71B /* SceneDelegate.swift in Sources */,
 			);

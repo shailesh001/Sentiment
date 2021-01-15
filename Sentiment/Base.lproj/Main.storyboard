@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sentiment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvb-Ql-VIk">
+                                <rect key="frame" x="8" y="837" width="412" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kl9-FA-Pic"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Analyze Sentiment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="analyzeSentimentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1x-8q-VEd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7h-vl-6JK">
+                                <rect key="frame" x="8" y="472" width="412" height="357"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="As9-Xv-ggA" userLabel="Color View">
+                                <rect key="frame" x="8" y="52" width="412" height="412"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huE-rd-HEK" userLabel="Emoji View">
+                                        <rect key="frame" x="8" y="117" width="396" height="178"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="149"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKv-pO-6Mv" userLabel="Label View">
+                                        <rect key="frame" x="8" y="303" width="396" height="55"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="huE-rd-HEK" secondAttribute="trailing" constant="8" id="1VR-2U-vaC"/>
+                                    <constraint firstAttribute="trailing" secondItem="iKv-pO-6Mv" secondAttribute="trailing" constant="8" id="6P3-r7-K7A"/>
+                                    <constraint firstAttribute="width" secondItem="As9-Xv-ggA" secondAttribute="height" multiplier="1:1" id="IgV-Of-1DZ"/>
+                                    <constraint firstItem="iKv-pO-6Mv" firstAttribute="top" secondItem="huE-rd-HEK" secondAttribute="bottom" constant="8" id="Po2-Hn-Y7Q"/>
+                                    <constraint firstItem="iKv-pO-6Mv" firstAttribute="leading" secondItem="As9-Xv-ggA" secondAttribute="leading" constant="8" id="sfV-KT-U3i"/>
+                                    <constraint firstItem="huE-rd-HEK" firstAttribute="centerY" secondItem="As9-Xv-ggA" secondAttribute="centerY" id="vSN-QD-Ebc"/>
+                                    <constraint firstItem="huE-rd-HEK" firstAttribute="leading" secondItem="As9-Xv-ggA" secondAttribute="leading" constant="8" id="yIt-ba-VqX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="As9-Xv-ggA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="3Gy-eu-lXg"/>
+                            <constraint firstItem="As9-Xv-ggA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AVh-sk-bRW"/>
+                            <constraint firstItem="N7h-vl-6JK" firstAttribute="top" secondItem="As9-Xv-ggA" secondAttribute="bottom" constant="8" id="Bfh-b3-Ozh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N7h-vl-6JK" secondAttribute="trailing" constant="8" id="LBb-58-GOr"/>
+                            <constraint firstItem="Hvb-Ql-VIk" firstAttribute="top" secondItem="N7h-vl-6JK" secondAttribute="bottom" constant="8" id="VeA-Ef-8RP"/>
+                            <constraint firstItem="Hvb-Ql-VIk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ftv-ff-0k6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="As9-Xv-ggA" secondAttribute="trailing" constant="8" id="jnr-Q6-Xlp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hvb-Ql-VIk" secondAttribute="bottom" constant="5" id="kkN-yd-o3t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hvb-Ql-VIk" secondAttribute="trailing" constant="8" id="wVO-hi-PWF"/>
+                            <constraint firstItem="N7h-vl-6JK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="yox-9q-jyh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="As9-Xv-ggA" id="X9P-sc-G31"/>
+                        <outlet property="emojiView" destination="huE-rd-HEK" id="Wkv-np-WsJ"/>
+                        <outlet property="labelView" destination="iKv-pO-6Mv" id="n22-eF-ugu"/>
+                        <outlet property="textView" destination="N7h-vl-6JK" id="Mx8-SF-ujJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.22429906542056" y="93.30453563714903"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
