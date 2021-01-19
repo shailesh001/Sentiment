@@ -17,6 +17,7 @@ extension String {
 enum Sentiment: String, CustomStringConvertible {
     case positive = "Positive"
     case negative = "Negative"
+    case neutral = "None"
     
     var description: String { return self.rawValue }
     

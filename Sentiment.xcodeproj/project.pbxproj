@@ -51,6 +51,7 @@
 		F20A15BB25B1AE890016F71B /* SentimentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentUITests.swift; sourceTree = "<group>"; };
 		F20A15BD25B1AE890016F71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F20A15CD25B1CD3B0016F71B /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
+		F288860C25B1D76200ACBA55 /* SentimentModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SentimentModel.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		F20A159825B1AE890016F71B /* Sentiment */ = {
 			isa = PBXGroup;
 			children = (
+				F288860C25B1D76200ACBA55 /* SentimentModel.playground */,
 				F20A159925B1AE890016F71B /* AppDelegate.swift */,
 				F20A159B25B1AE890016F71B /* SceneDelegate.swift */,
 				F20A159D25B1AE890016F71B /* ViewController.swift */,
